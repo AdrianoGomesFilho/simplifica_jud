@@ -1,65 +1,123 @@
+:root {
+  --green: #95f1a1;
+  --dark-green: hsl(131, 51%, 41%); /* Darker shade for active */
+  --yellow: #ffe8a4;
+  --dark-yellow: #c4a23f; /* Darker shade for active */
+  --red: #f78994;
+  --dark-red: #bd4450; /* Darker shade for active */
+  --blue: #94c8ff;
+  --dark-blue: #3680cf; /* Darker shade for active */
+  --text-color: rgb(48, 47, 47); /* Text color */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  
-  .container {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .row {
-    display: table-row;
-  }
-  
-  .cell {
-    display: table-cell;
-    border: 1px solid #ccc;
-    padding: 10px;
-    vertical-align: middle;
-    position: relative;
-  }
-  
-  .emoji-picker {
-    cursor: pointer;
-    font-size: 24px;
-    margin: 5px;
-  }
-  
-  .emoji-popup {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-  }
-  
-  .emoji-popup span {
-    cursor: pointer;
-    font-size: 24px;
-    margin: 5px;
-  }
-  
-  .emoji-popup span:hover {
-    background-color: #f0f0f0;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    font-size: 16px;
-  }
-  
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #b3d9eb, #d9d9d9); /* Gradient from light gray to darker gray */
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.cell {
+  flex: 1;
+  margin: 0 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: stretch; /* Stretch buttons to fill the container */
+  gap: 5px; /* Space between buttons */
+  width: 100%; /* Ensure the container uses full width */
+}
+
+.button {
+  margin-right: 5px;
+  padding: 10px 15px;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--text-color); /* Use text color variable */
+  transition: background-color 0.3s;
+}
+
+.button-1 {
+  background-color: var(--green);
+}
+
+.button-2 {
+  background-color: var(--yellow);
+}
+
+.button-3 {
+  background-color: var(--red);
+}
+
+.button-4 {
+  background-color: var(--blue);
+}
+
+/* Active states with increased contrast using variables */
+.button-1.active {
+  background-color: var(--dark-green);
+}
+
+.button-2.active {
+  background-color: var(--dark-yellow);
+}
+
+.button-3.active {
+  background-color: var(--dark-red);
+}
+
+.button-4.active {
+  background-color: var(--dark-blue);
+}
+
+/* Optional: Add hover effect */
+.button:hover {
+  opacity: 0.8; /* Slightly reduce opacity on hover */
+}
+
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  border-radius: 4px;
+  display: none; /* Hidden by default */
+}

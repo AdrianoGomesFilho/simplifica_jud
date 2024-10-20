@@ -1,98 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS -->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume aí!</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    .container {
-      display: table;
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .row {
-      display: table-row;
-    }
-    .cell {
-      display: table-cell;
-      border: 1px solid #ccc;
-      padding: 10px;
-      vertical-align: middle;
-      position: relative;
-    }
-    .emoji-picker {
-      cursor: pointer;
-      font-size: 24px;
-      margin: 5px;
-    }
-    .emoji-popup {
-      display: none;
-      position: absolute;
-      top: 40px;
-      left: 0;
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 10;
-    }
-    .emoji-popup span {
-      cursor: pointer;
-      font-size: 24px;
-      margin: 5px;
-    }
-    .emoji-popup span:hover {
-      background-color: #f0f0f0;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 8px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 15px;
-      font-size: 16px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script> <!-- Use defer to load script after HTML -->
 </head>
-<body>
 
-  <h2>Emoji and Text Input</h2>
-  
+<body>
+  <h2>Preencha os dados abaixo</h2>
+  <h3>Dica: após preencher clique "TAB" para avançar</h3>
   <div class="container" id="emoji-container">
     <div class="row">
       <div class="cell">
-        <div class="emoji-picker" onclick="toggleEmojiPopup(this)">Parte autora</div>
-        <div class="emoji-popup">
-          <span onclick="insertEmoji('🟢')">🟢</span>
-          <span onclick="insertEmoji('🟡')">🟡</span>
-          <span onclick="insertEmoji('🔴')">🔴</span>
-          <span onclick="insertEmoji('🔵')">🔵</span>
-        </div>
-      </div>
-      <div class="cell">
-        <input type="text" placeholder="">
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="cell">
-        <div class="emoji-picker" onclick="toggleEmojiPopup(this)">Parte ré</div>
-        <div class="emoji-popup">
-          <span onclick="insertEmoji('🟢')">🟢</span>
-          <span onclick="insertEmoji('🟡')">🟡</span>
-          <span onclick="insertEmoji('🔴')">🔴</span>
-          <span onclick="insertEmoji('🔵')">🔵</span>
-        </div>
+        <div>Parte autora</div>
       </div>
       <div class="cell">
         <input type="text" placeholder="">
@@ -101,13 +23,7 @@
 
     <div class="row">
       <div class="cell">
-        <div class="emoji-picker" onclick="toggleEmojiPopup(this)">Número do processo</div>
-        <div class="emoji-popup">
-          <span onclick="insertEmoji('🟢')">🟢</span>
-          <span onclick="insertEmoji('🟡')">🟡</span>
-          <span onclick="insertEmoji('🔴')">🔴</span>
-          <span onclick="insertEmoji('🔵')">🔵</span>
-        </div>
+        <div>Parte ré</div>
       </div>
       <div class="cell">
         <input type="text" placeholder="">
@@ -116,92 +32,31 @@
 
     <div class="row">
       <div class="cell">
-        <div class="emoji-picker" onclick="toggleEmojiPopup(this)">Qual o resultado?</div>
-        <div class="emoji-popup">
-          <span onclick="insertEmoji('🟢')">🟢</span>
-          <span onclick="insertEmoji('🟡')">🟡</span>
-          <span onclick="insertEmoji('🔴')">🔴</span>
-          <span onclick="insertEmoji('🔵')">🔵</span>
-        </div>
+        <div>Número do processo</div>
       </div>
       <div class="cell">
-        <input type="text" placeholder="Pedido">
+        <input type="text" placeholder="">
       </div>
     </div>
 
     <div class="row">
       <div class="cell">
-        <div class="emoji-picker" onclick="toggleEmojiPopup(this)">Qual o resultado?</div>
-        <div class="emoji-popup">
-          <span onclick="insertEmoji('🟢')">🟢</span>
-          <span onclick="insertEmoji('🟡')">🟡</span>
-          <span onclick="insertEmoji('🔴')">🔴</span>
-          <span onclick="insertEmoji('🔵')">🔵</span>
+        <div class="button-container">
+          <button class="button button-1" tabindex="-1" onclick="selectButton(this, '🟢')">Procede</button>
+          <button class="button button-2" tabindex="-1" onclick="selectButton(this, '🟢')">Parcialmente procedente</button>
+          <button class="button button-3" tabindex="-1" onclick="selectButton(this, '🟢')">Improcede</button>
+          <button class="button button-4" tabindex="-1" onclick="selectButton(this, '🟢')">Outro</button>
         </div>
       </div>
       <div class="cell">
         <input type="text" placeholder="Pedido">
       </div>
-    </div>
-
-    <div class="row">
       <div class="cell">
-        <div class="emoji-picker" onclick="toggleEmojiPopup(this)">Qual o resultado?</div>
-        <div class="emoji-popup">
-          <span onclick="insertEmoji('🟢')">🟢</span>
-          <span onclick="insertEmoji('🟡')">🟡</span>
-          <span onclick="insertEmoji('🔴')">🔴</span>
-          <span onclick="insertEmoji('🔵')">🔵</span>
-        </div>
-      </div>
-      <div class="cell">
-        <input type="text" placeholder="Pedido">
+        <input type="text" placeholder="Fundamento da decisão">
       </div>
     </div>
   </div>
-
   <button onclick="addRow()">Adicionar mais linhas</button>
-
-  <script>
-    function addRow() {
-      const container = document.getElementById('emoji-container');
-      const row = document.createElement('div');
-      row.className = 'row';
-      row.innerHTML = `
-        <div class="cell">
-          <div class="emoji-picker" onclick="toggleEmojiPopup(this)">Qual o resultado?</div>
-          <div class="emoji-popup">
-            <span onclick="insertEmoji('🟢')">🟢</span>
-            <span onclick="insertEmoji('🟡')">🟡</span>
-            <span onclick="insertEmoji('🔴')">🔴</span>
-            <span onclick="insertEmoji('🔵')">🔵</span>
-          </div>
-        </div>
-        <div class="cell">
-          <input type="text" placeholder="Pedido">
-        </div>
-      `;
-      container.appendChild(row);
-    }
-
-    function toggleEmojiPopup(element) {
-      const popup = element.nextElementSibling;
-      popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
-    }
-
-    function insertEmoji(emoji) {
-      const input = event.target.closest('.row').querySelector('input[type="text"]');
-      input.value = emoji + input.value; 
-      toggleEmojiPopup(input.previousElementSibling);
-    }
-
-    window.onclick = function(event) {
-      if (!event.target.matches('.emoji-picker')) {
-        const popups = document.querySelectorAll('.emoji-popup');
-        popups.forEach(popup => popup.style.display = 'none');
-      }
-    };
-  </script>
-
+  <button onclick="copyResults()">Copiar resumo</button>
 </body>
 </html>
