@@ -9,8 +9,8 @@
 </head>
 
 <body>
-  <h2>Preencha os dados abaixo</h2>
-  <h3>Dica: após preencher clique "TAB" para avançar</h3>
+  <h2>Organize e resuma sentenças e acórdãos</h2>
+  <h3>Dica: aperte TAB após preencher, inclusive para incluir novos pedidos.</h3>
   <div class="container" id="emoji-container">
     <div class="row">
       <div class="cell">
@@ -38,21 +38,26 @@
         <input type="text" placeholder="">
       </div>
     </div>
-
-    <div class="row">
-      <div class="cell">
-        <div class="button-container">
-          <button class="button button-1" tabindex="-1" onclick="selectButton(this, '🟢')">Procede</button>
-          <button class="button button-2" tabindex="-1" onclick="selectButton(this, '🟢')">Parcialmente procedente</button>
-          <button class="button button-3" tabindex="-1" onclick="selectButton(this, '🟢')">Improcede</button>
-          <button class="button button-4" tabindex="-1" onclick="selectButton(this, '🟢')">Outro</button>
+    <div class="supercell">
+      <!-- First Row: Buttons Row -->
+      <div class="row button-row">
+        <div class="cell">
+          <div class="button-container">
+            <button class="button button-1" data-preview="Procede" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+            <button class="button button-2" data-preview="Parcialmente procedente" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+            <button class="button button-3" data-preview="Improcede" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+            <button class="button button-4" data-preview="Outro" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+          </div>
         </div>
       </div>
-      <div class="cell">
-        <input type="text" placeholder="Pedido">
-      </div>
-      <div class="cell">
-        <input type="text" placeholder="Fundamento da decisão">
+      <!-- Second Row: Inputs -->
+      <div class="row input-row">
+        <div class="cell">
+          <input type="text" placeholder="Pedido">
+        </div>
+        <div class="cell">
+          <input type="text" placeholder="Fundamento da decisão">
+        </div>
       </div>
     </div>
   </div>

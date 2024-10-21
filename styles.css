@@ -31,14 +31,36 @@ h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.supercell {
+  display: flex;
+  height: 100%; /* Ensure the container takes full height */
+  background-color: #bdbebe;
+  padding: 5px;
+  border-radius: 8px;
+}
+
 .row {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
+  gap: 10px;
+}
+
+/* First Row (button row) takes up 1/5 of the height */
+.button-row {
+  flex: 1 1 20%; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 20% */
+  padding: 5px 0; /* Minimal padding on top and bottom */
+  margin-bottom: 10px; /* Reduced spacing between rows */
+}
+
+/* Second and third rows (input rows) take up 2/5 each */
+.input-row {
+  flex: 2 1 40%; /* Flex-grow: 2, Flex-shrink: 1, Flex-basis: 40% */
+  display: flex;
+  gap: 10px; /* Space between the inputs */
 }
 
 .cell {
   flex: 1;
+  align-content: center;
   margin: 0 10px;
 }
 
@@ -46,9 +68,10 @@ input[type="text"] {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #ddd;
+  border: 2px solid #7a7878;
   border-radius: 4px;
   transition: border-color 0.3s;
+  box-sizing: border-box;
 }
 
 input[type="text"]:focus {
@@ -58,22 +81,45 @@ input[type="text"]:focus {
 
 .button-container {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  align-items: stretch; /* Stretch buttons to fill the container */
   gap: 5px; /* Space between buttons */
-  width: 100%; /* Ensure the container uses full width */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center;
 }
 
+/* Make the buttons smaller and more minimalist */
 .button {
-  margin-right: 5px;
-  padding: 10px 15px;
-  border: transparent;
-  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
   cursor: pointer;
-  color: var(--text-color); /* Use text color variable */
-  transition: background-color 0.3s;
+  padding: 0; /* Remove padding for a cleaner look */
+  position: relative;
+  transition: background-color 0.3s, opacity 0.3s;
 }
 
+/* Show preview text on hover */
+.button::before {
+  content: attr(data-preview);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+/* Button colors */
 .button-1 {
   background-color: var(--green);
 }

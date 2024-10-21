@@ -40,20 +40,58 @@ function addRow() {
   const newRow = document.createElement('div');
   newRow.className = 'row';
   newRow.innerHTML = `
-    <div class="cell">
-      <div class="button-container">
-        <button class="button button-1" tabindex="-1" onclick="selectButton(this, '🟢')">Procede</button>
-        <button class="button button-2" tabindex="-1" onclick="selectButton(this, '🟡')">Parcialmente procedente</button>
-        <button class="button button-3" tabindex="-1" onclick="selectButton(this, '🔴')">Improcede</button>
-        <button class="button button-4" tabindex="-1" onclick="selectButton(this, '🔵')">Outro</button>
+    <div class="supercell">
+      <!-- First Row: Buttons Row -->
+      <div class="row button-row">
+        <div class="cell">
+          <div class="button-container">
+            <button class="button button-1" data-preview="Procede" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+            <button class="button button-2" data-preview="Parcialmente procedente" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+            <button class="button button-3" data-preview="Improcede" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+            <button class="button button-4" data-preview="Outro" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="cell">
-      <input type="text" placeholder="Pedido">
-    </div>
-    <div class="cell">
-      <input type="text" placeholder="Fundamento da decisão">
+      <!-- Second Row: Inputs -->
+      <div class="row input-row">
+        <div class="cell">
+          <input type="text" placeholder="Pedido">
+        </div>
+        <div class="cell">
+          <input type="text" placeholder="Fundamento da decisão">
+        </div>
+      </div>
     </div>
   `;
   container.appendChild(newRow);
+    // Automatically focus the first input of the new row
+    newRow.querySelector('input').focus();
+
+    // Add the Tab key listener to the last input in the new row
+    addTabKeyListener();
 }
+
+// Function to handle button selection and styling
+function selectButton(button, emoji) {
+  const buttons = button.parentNode.querySelectorAll('.button');
+  buttons.forEach(btn => btn.classList.remove('active')); // Remove active class from all buttons in this container
+  button.classList.add('active'); // Add active class to clicked button
+}
+
+// Function to listen for the Tab key in the last input
+function addTabKeyListener() {
+  const inputs = document.querySelectorAll("input[type='text']");
+  const lastInput = inputs[inputs.length - 1]; // Get the last input element
+
+  lastInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault(); // Prevent the default Tab behavior
+      addRow(); // Add a new row
+    }
+  });
+}
+
+// Add the Tab key listener to the last input on page load
+window.onload = function() {
+  addTabKeyListener();
+};
