@@ -4,53 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume aí!</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script> <!-- Use defer to load script after HTML -->
+  <!-- <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script> -->
 </head>
 
 <body>
   <h2>Organize e resuma sentenças e acórdãos</h2>
   <h3>Dica: aperte TAB após preencher, inclusive para incluir novos pedidos.</h3>
-  <div class="container" id="emoji-container">
+  <div class="container">
     <div class="row">
-      <div class="cell">
-        <div>Parte autora</div>
-      </div>
-      <div class="cell">
-        <input type="text" placeholder="">
-      </div>
+        <div class="cell">
+            Parte autora
+        </div>
+        <div class="cell">
+            <input type="text" placeholder="">
+        </div>
     </div>
 
     <div class="row">
-      <div class="cell">
-        <div>Parte ré</div>
-      </div>
-      <div class="cell">
-        <input type="text" placeholder="">
-      </div>
+        <div class="cell">
+            Parte ré
+        </div>
+        <div class="cell">
+            <input type="text">
+        </div>
     </div>
-
     <div class="row">
-      <div class="cell">
-        <div>Número do processo</div>
-      </div>
-      <div class="cell">
-        <input type="text" placeholder="">
-      </div>
+        <div class="cell">
+            Número do processo
+        </div>
+        <div class="cell">
+            <input type="text">
+        </div>
     </div>
-    <div class="supercell">
-      <!-- First Row: Buttons Row -->
+    <div class="linha_pedidos">
+
       <div class="row button-row">
         <div class="cell">
           <div class="button-container">
             <button class="button button-1" data-preview="Procede" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
-            <button class="button button-2" data-preview="Parcialmente procedente" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
-            <button class="button button-3" data-preview="Improcede" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
-            <button class="button button-4" data-preview="Outro" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+            <button class="button button-2" data-preview="Parcialmente procedente" tabindex="-1" onclick="selectButton(this, '🟡')"></button>
+            <button class="button button-3" data-preview="Improcede" tabindex="-1" onclick="selectButton(this, '🔴')"></button>
+            <button class="button button-4" data-preview="Outro" tabindex="-1" onclick="selectButton(this, '🔵')"></button>
           </div>
         </div>
       </div>
-      <!-- Second Row: Inputs -->
+
       <div class="row input-row">
         <div class="cell">
           <input type="text" placeholder="Pedido">
@@ -59,6 +58,7 @@
           <input type="text" placeholder="Fundamento da decisão">
         </div>
       </div>
+      
     </div>
   </div>
   <button onclick="addRow()">Adicionar mais linhas</button>

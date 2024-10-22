@@ -40,15 +40,15 @@ function addRow() {
   const newRow = document.createElement('div');
   newRow.className = 'row';
   newRow.innerHTML = `
-    <div class="supercell">
+    <div class="linha_pedidos">
       <!-- First Row: Buttons Row -->
       <div class="row button-row">
         <div class="cell">
           <div class="button-container">
             <button class="button button-1" data-preview="Procede" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
-            <button class="button button-2" data-preview="Parcialmente procedente" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
-            <button class="button button-3" data-preview="Improcede" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
-            <button class="button button-4" data-preview="Outro" tabindex="-1" onclick="selectButton(this, '🟢')"></button>
+            <button class="button button-2" data-preview="Parcialmente procedente" tabindex="-1" onclick="selectButton(this, '🟡')"></button>
+            <button class="button button-3" data-preview="Improcede" tabindex="-1" onclick="selectButton(this, '🔴')"></button>
+            <button class="button button-4" data-preview="Outro" tabindex="-1" onclick="selectButton(this, '🔵')"></button>
           </div>
         </div>
       </div>
