@@ -15,55 +15,56 @@
     <div class="container">
         <h2>Simplifica Jud</h2>
     <h3>Dica: aperte TAB para preencher e criar novas linhas</h3>
-        <div class="row">
-            <div class="cell">
-                Parte autora
+        <div class="row_dados">
+            <div class="row">
+                <div class="cell">
+                    <input type="text"
+                    class="input"
+                    placeholder="Parte autora">
+                </div>
             </div>
-            <div class="cell">
-                <input type="text" placeholder="">
+            <div class="row">
+                <div class="cell">
+                    <input type="text"
+                    class="input"
+                    placeholder="Parte ré">
+                </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="cell">
-                Parte ré
-            </div>
-            <div class="cell">
-                <input type="text">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="cell">
-                Número do processo
-            </div>
-            <div class="cell">
-                <input type="text">
+            
+            <div class="row">
+                <div class="cell">
+                    <input type="text"
+                    class="input"
+                    placeholder="Número do processo">
+                </div>
             </div>
         </div>
 
         <div class="linha_pedidos">
 
                 <div class="container_botoes">
-                    <div class="button_box button-container1">
-                        <button class="button button-1"></button>
-                        <button class="button button-2"></button>
+                    <div class="button_box button_container1">
+                        <button class="button button_1"></button>
+                        <button class="button button_2"></button>
                     </div>
-                    <div class="button_box button-container2">
-                        <button class="button button-3"></button>
-                        <button class="button button-4"></button>
+                    <div class="button_box button_container2">
+                        <button class="button button_3"></button>
+                        <button class="button button_4"></button>
                     </div>
                 </div>
 
-            <div class="row input-row">
-                <input type="text" placeholder="Pedido">
-                <input type="text" placeholder="Fundamento da decisão">
-                <input type="text" placeholder="Valor do pedido">
+            <div class="row input_row">
+                <input type="text" class="input  input_pedido" 
+                placeholder="Pedido">
+                <input type="text" class="input  input_fundamento" placeholder="Fundamento da decisão" >
+                <input type="text" 
+                class="input input_valor"
+                placeholder="Valor do pedido" >
             </div>
 
         </div>
-        <button onclick="addRow()">Adicionar linha</button>
-        <button onclick="copyResults()">Copiar resumo</button>
+        <button onclick="addRow()" class="input botao_script">Adicionar linha</button>
+        <button onclick="copyResults()" class="input botao_script">Copiar resumo</button>
     </div>
     
     <footer>

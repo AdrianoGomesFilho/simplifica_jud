@@ -9,16 +9,16 @@
   --dark-blue: #273bac;
   --text-color: #02040F;
   /* coolors */
-  --white-background: #ffffff;
-  --orange: #E07A5F;
-  --dark: #02040F;
-  --green_moss: #cfe5e7;
-  --blue_sea: #473BF0;
+  --background: #ffffff;
+  --destaque: #ffb392;
+  --detalhe1: #ffffff;
+  --detalhe2: #e2f1ff;
+  --escuro: #02040F;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: var(--green_moss);
+  background: var(--background);
   margin: 0;
   padding: 20px;
 }
@@ -27,69 +27,115 @@ h2 {
   font-size: 2rem;
   padding: 10px;
   text-align: center;
-  color: var(--dark);
-  background: var(--orange);
+  color: var(--escuro);
+  background: var(--destaque);
   margin: 30px;
   border-radius: 10px;
+  box-shadow: 0 44px 310px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin: 30px;
 }
 
 .container {
   max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  background-color: var(--white-background);
+  background-color: var(--detalhe2);
   border-radius: 10px;
-  box-shadow: 0 4px 10px --dark;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container_botoes {
+  margin: 10px;
 }
 
 .linha_pedidos {
+  margin: 20px auto;
   display: flex;
-}
-
-.container_botoes{ 
-  margin:10px;
-}
-
-.button_box {
-  display: flex;  
+  align-items: center;
 }
 
 .button {
-  background-color: #02040F;
-  margin: 2px;
+  margin: 0.5px;
   height: 20px;
   width: 20px;
   border: none;
   cursor: pointer;
-  transition: var(--white-background) 0.3s;
 }
 
 .button:hover {
   transform: scale(1.1);
-  box-shadow: 2px 2px 15px black
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.button-1{
+.button_1{
   background-color: var(--green);
-  border-radius: 100% 0 0 0;
-  
+  border-radius: 30%;
 }
 
-.button-2 {
+.button_2 {
   background-color: var(--yellow);
-  border-radius: 0 100% 0 0;
+  border-radius: 30%;
 }
 
-.button-3 {
+.button_3 {
   background-color: var(--red);
-  border-radius: 0 0 0 100%;
+  border-radius: 30%;
 }
 
-.button-4 {
+.button_4 {
   background-color: var(--blue);
-  border-radius: 0 0 100% 0;
+  border-radius: 30%;
 }
+
+.input {
+  padding: 1em;
+  border: none;
+  background-color: var(--detalhe1);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input:hover {
+  transform: scale(1.03);
+}
+
+.input:focus {
+  outline: none; /* Removes default outline */
+}
+
+input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input_row {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.row_dados {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input_pedido {
+  flex: 2;
+}
+
+.input_fundamento {
+  flex: 3;
+}
+
+.input_valor {
+  flex: 1;
+}
+
+.botao_script {
+  font-family: 'Montserrat', sans-serif;
+}
+
