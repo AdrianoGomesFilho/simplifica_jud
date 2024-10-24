@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume ai!</title>
-    <!-- <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>  -->
+    <title>Simplifica Jud</title>
+    <link rel="stylesheet" href="styles_reescrita.css">
+    <script src="script_reescrita.js" defer></script>
     <!-- defer = ensures that script only runs after the full load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Simplifique o juridiquês</h2>
-    <h3>Dica: aperte TAB para preencher e criar novas linhas</h3>
     <div class="container">
-        
+        <h2>Simplifica Jud</h2>
+    <h3>Dica: aperte TAB para preencher e criar novas linhas</h3>
         <div class="row">
             <div class="cell">
                 Parte autora
@@ -42,25 +44,33 @@
 
         <div class="linha_pedidos">
 
-            <div class="row button-row">
                 <div class="container_botoes">
-                    <div class="button-container">
+                    <div class="button_box button-container1">
                         <button class="button button-1"></button>
                         <button class="button button-2"></button>
+                    </div>
+                    <div class="button_box button-container2">
                         <button class="button button-3"></button>
                         <button class="button button-4"></button>
                     </div>
                 </div>
-            </div>
 
             <div class="row input-row">
                 <input type="text" placeholder="Pedido">
                 <input type="text" placeholder="Fundamento da decisão">
+                <input type="text" placeholder="Valor do pedido">
             </div>
 
         </div>
-
+        <button onclick="addRow()">Adicionar linha</button>
+        <button onclick="copyResults()">Copiar resumo</button>
     </div>
-
+    
+    <footer>
+        <p>
+            Veja mais projetos no
+            <a href="https://github.com/AdrianoGomesFilho?tab=repositories" target="_blank">Github Adriano Gomes</a>
+        </p>
+    </footer>
 </body>
 </html>

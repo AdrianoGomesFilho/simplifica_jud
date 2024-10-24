@@ -1,0 +1,95 @@
+:root {
+  --green: #6bf376;
+  --dark-green: #015005;
+  --yellow: #ffff7a;
+  --dark-yellow: #939311;
+  --red: #ff4f4f;
+  --dark-red: #ad3131;
+  --blue: #76d5f1;
+  --dark-blue: #273bac;
+  --text-color: #02040F;
+  /* coolors */
+  --white-background: #ffffff;
+  --orange: #E07A5F;
+  --dark: #02040F;
+  --green_moss: #cfe5e7;
+  --blue_sea: #473BF0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--green_moss);
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 10px;
+  text-align: center;
+  color: var(--dark);
+  background: var(--orange);
+  margin: 30px;
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 0.7rem;
+  margin: 30px;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  background-color: var(--white-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px --dark;
+}
+
+.linha_pedidos {
+  display: flex;
+}
+
+.container_botoes{ 
+  margin:10px;
+}
+
+.button_box {
+  display: flex;  
+}
+
+.button {
+  background-color: #02040F;
+  margin: 2px;
+  height: 20px;
+  width: 20px;
+  border: none;
+  cursor: pointer;
+  transition: var(--white-background) 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 15px black
+}
+
+.button-1{
+  background-color: var(--green);
+  border-radius: 100% 0 0 0;
+  
+}
+
+.button-2 {
+  background-color: var(--yellow);
+  border-radius: 0 100% 0 0;
+}
+
+.button-3 {
+  background-color: var(--red);
+  border-radius: 0 0 0 100%;
+}
+
+.button-4 {
+  background-color: var(--blue);
+  border-radius: 0 0 100% 0;
+}
