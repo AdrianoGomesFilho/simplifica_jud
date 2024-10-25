@@ -1,169 +1,141 @@
 :root {
-  --green: #95f1a1;
-  --dark-green: hsl(131, 51%, 41%); /* Darker shade for active */
-  --yellow: #ffe8a4;
-  --dark-yellow: #c4a23f; /* Darker shade for active */
-  --red: #f78994;
-  --dark-red: #bd4450; /* Darker shade for active */
-  --blue: #94c8ff;
-  --dark-blue: #3680cf; /* Darker shade for active */
-  --text-color: rgb(48, 47, 47); /* Text color */
+  --green: #6bf376;
+  --dark-green: #015005;
+  --yellow: #ffff7a;
+  --dark-yellow: #939311;
+  --red: #ff4f4f;
+  --dark-red: #ad3131;
+  --blue: #76d5f1;
+  --dark-blue: #273bac;
+  --text-color: #02040F;
+  /* coolors */
+  --background: #ffffff;
+  --destaque: #ffb392;
+  --detalhe1: #ffffff;
+  --detalhe2: #e2f1ff;
+  --escuro: #02040F;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #b3d9eb, #d9d9d9); /* Gradient from light gray to darker gray */
+  font-family: 'Montserrat', sans-serif;
+  background: var(--background);
   margin: 0;
   padding: 20px;
 }
 
 h2 {
+  font-size: 2rem;
+  padding: 10px;
   text-align: center;
-  color: #333;
+  color: var(--escuro);
+  background: var(--destaque);
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 0 44px 310px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 0.8rem;
+  margin: 30px;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--detalhe2);
+  border-radius: 10px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container_botoes {
+  margin: 10px;
 }
 
 .linha_pedidos {
+  margin: 20px auto;
   display: flex;
-  height: 100%; /* Ensure the container takes full height */
-  background-color: #bdbebe;
-  padding: 5px;
-  border-radius: 8px;
-}
-
-.row {
-  display: flex;
-  gap: 10px;
-}
-
-/* First Row (button row) takes up 1/5 of the height */
-.button-row {
-  flex: 1 1 20%; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 20% */
-  padding: 5px 0; /* Minimal padding on top and bottom */
-  margin-bottom: 10px; /* Reduced spacing between rows */
-}
-
-/* Second and third rows (input rows) take up 2/5 each */
-.input-row {
-  flex: 2 1 40%; /* Flex-grow: 2, Flex-shrink: 1, Flex-basis: 40% */
-  display: flex;
-  gap: 10px; /* Space between the inputs */
-}
-
-.cell {
-  flex: 1;
-  align-content: center;
-  margin: 0 10px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #7a7878;
-  border-radius: 4px;
-  transition: border-color 0.3s;
-  box-sizing: border-box;
-}
-
-input[type="text"]:focus {
-  border-color: #007BFF;
-  outline: none;
-}
-
-.button-container {
-  display: flex;
-  gap: 5px; /* Space between buttons */
-  justify-content: center; /* Center buttons horizontally */
   align-items: center;
 }
 
-/* Make the buttons smaller and more minimalist */
 .button {
-  width: 30px;
-  height: 30px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 50%;
+  margin: 0.5px;
+  height: 20px;
+  width: 20px;
+  border: none;
   cursor: pointer;
-  padding: 0; /* Remove padding for a cleaner look */
-  position: relative;
-  transition: background-color 0.3s, opacity 0.3s;
 }
 
-/* Show preview text on hover */
-.button::before {
-  content: attr(data-preview);
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: white;
-  padding: 3px;
-  border-radius: 3px;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  white-space: nowrap;
-}
-
-.button:hover::before {
-  opacity: 1;
-}
-
-/* Button colors */
-.button-1 {
-  background-color: var(--green);
-}
-
-.button-2 {
-  background-color: var(--yellow);
-}
-
-.button-3 {
-  background-color: var(--red);
-}
-
-.button-4 {
-  background-color: var(--blue);
-}
-
-/* Active states with increased contrast using variables */
-.button-1.active {
-  background-color: var(--dark-green);
-}
-
-.button-2.active {
-  background-color: var(--dark-yellow);
-}
-
-.button-3.active {
-  background-color: var(--dark-red);
-}
-
-.button-4.active {
-  background-color: var(--dark-blue);
-}
-
-/* Optional: Add hover effect */
 .button:hover {
-  opacity: 0.8; /* Slightly reduce opacity on hover */
+  transform: scale(1.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.alert {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #d4edda;
-  border: 1px solid #c3e6cb;
-  color: #155724;
-  border-radius: 4px;
-  display: none; /* Hidden by default */
+.button_1{
+  background-color: var(--green);
+  border-radius: 30%;
 }
+
+.button_2 {
+  background-color: var(--yellow);
+  border-radius: 30%;
+}
+
+.button_3 {
+  background-color: var(--red);
+  border-radius: 30%;
+}
+
+.button_4 {
+  background-color: var(--blue);
+  border-radius: 30%;
+}
+
+.input {
+  padding: 1em;
+  border: none;
+  background-color: var(--detalhe1);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input:hover {
+  transform: scale(1.03);
+}
+
+.input:focus {
+  outline: none; /* Removes default outline */
+}
+
+input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input_row {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.row_dados {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input_pedido {
+  flex: 2;
+}
+
+.input_fundamento {
+  flex: 3;
+}
+
+.input_valor {
+  flex: 1;
+}
+
+.botao_script {
+  font-family: 'Montserrat', sans-serif;
+}
+
