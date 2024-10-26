@@ -17,51 +17,68 @@
 <body>
   <div class="container">
     <h2>Simplifica Jud</h2>
-    <h3>Dica: aperte TAB para preencher e criar novas linhas</h3>
+    <h3>Dica: aperte TAB para <strong>avançar</strong> e também criar <strong>novas linhas</strong></h3>
     <div class="row_dados">
-      <div class="row">
+      <div class="row dados_processo dados_autor">
         <div class="cell">
-          <input type="text" class="input" placeholder="Parte autora">
+          <input class="input input_dados" type="text" class="input" placeholder="Parte autora">
         </div>
       </div>
-      <div class="row">
+      <div class="row dados_processo dados_re">
         <div class="cell">
-          <input type="text" class="input" placeholder="Parte ré">
+          <input class="input input_dados" type="text" class="input" placeholder="Parte ré">
         </div>
       </div>
 
-      <div class="row">
+      <div class="row dados_processo dados_numero">
         <div class="cell">
-          <input type="text" class="input" placeholder="Número do processo">
+          <input class="input input_dados" type="text" class="input" placeholder="Número do processo">
+        </div>
+      </div>
+      <div class="row dados_processo dados_orgao">
+        <div class="cell">
+          <select class="input input_dados input" placeholder="Órgão julgador">
+            <option value="" disabled selected>Selecione o órgão julgador</option>
+            <option value="Juiz(a)">Juiz(a)</option>
+            <option value="Tribunal">Tribunal</option>
+          </select>
         </div>
       </div>
     </div>
 
     <div class="medium_container">
+      <div class="row input_row">
+      <div class="container_botoes">
+        <button class="button button_emoji button_1" onclick="pressEffect(this);setActiveEmoji('🟢')" data-emoji="🟢"></button>
+        <button class="button button_emoji button_2" onclick="pressEffect(this);setActiveEmoji('🟡')" data-emoji="🟡"></button>
+        <button class="button button_emoji button_3" onclick="pressEffect(this);setActiveEmoji('🔴')" data-emoji="🔴"></button>
+        <button class="button button_emoji button_4" onclick="pressEffect(this); setActiveEmoji('🔵')" data-emoji="🔵"></button>
+        <button class="button button_5" onclick="pressEffect(this);clearInputs()">Restaurar</button>
+      </div>
 
-      
-        <div class="container_botoes">
-          <button class="button button_emoji button_1" onclick="pressEffect(this)"></button>
-          <button class="button button_emoji button_2" onclick="pressEffect(this)"></button>
-          <button class="button button_emoji button_3" onclick="pressEffect(this)"></button>
-          <button class="button button_emoji button_4" onclick="pressEffect(this)"></button>
-          <button class="button button_5" onclick="pressEffect(this)">Limpar</button>
-        </div>
-        <div class="row input_row">
-          <input type="text" class="input  input_pedido" placeholder="Pedido">
-          <input type="text" class="input  input_fundamento" placeholder="Fundamento da decisão">
-          <input type="text" class="input input_valor" placeholder="Valor do pedido">
-        </div>
+      <input type="text" class="input  input_pedido" placeholder="Pedido">
+      <input type="text" class="input  input_fundamento" placeholder="Fundamento da decisão">
+      <input type="text" class="input input_valor" placeholder="Valor do pedido">
     </div>
+    </div>
+    <button onclick="pressEffect(this); addRow()" class="input botao_script">Adicionar linha</button>
+    <button onclick="pressEffect(this); copyResults()" class="input botao_script">Copiar resumo</button>
+    <div>
+      <h3>Pré - visualização</h3>
+      <div id="preview" class="preview"></div>
+    </div>
+  </div>
 
-    <button onclick="addRow()" class="input botao_script">Adicionar linha</button>
-    <button onclick="copyResults()" class="input botao_script">Copiar resumo</button>
-    <footer>
-      <p class="footer">
-        Veja mais projetos no
-        <a class="github"href="https://github.com/AdrianoGomesFilho?tab=repositories" target="_blank">Github Adriano Gomes</a>
-      </p>
-    </footer>
+  
+  <footer>
+    <p class="footer">
+      Veja mais projetos no
+      <a class="github" href="https://github.com/AdrianoGomesFilho?tab=repositories" target="_blank">Github Adriano
+        Gomes</a>
+    </p>
+  </footer>
+
+  </div>
 </body>
 
 </html>

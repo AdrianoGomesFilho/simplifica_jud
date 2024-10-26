@@ -1,8 +1,8 @@
 :root {
-  --green: #00be10;
-  --yellow: #e4e400;
+  --green: #00aa0e;
+  --yellow: #b4b400;
   --red: #aa0000;
-  --blue: #2255ff;
+  --blue: #002ab3;
   --text-color: #02040F;
   /* coolors */
   --background: #ffffff;
@@ -56,15 +56,6 @@ h3 {
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-.medium_container {
-  margin: 20px auto;
-  padding: 10px;
-  background-color: var(--detalhe1);
-  display: flex;
-  justify-content: space-evenly;
-  border-radius: 10px;
-}
-
 .container_botoes {
  display: flex;
  justify-content: space-evenly;
@@ -92,7 +83,7 @@ h3 {
 .button_emoji.active { 
   transform: scale(1.2);
   box-shadow: 1px 2px 9px 0px rgb(255, 255, 255);
-  filter: brightness(1.9); /* Darken the color by 20% */
+  filter: brightness(2);
 }
 
 .button_1{
@@ -123,6 +114,27 @@ h3 {
   font-size: 0.8em;
 }
 
+.button_delete {
+  background-color: var(--detalhe1);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  width: 10px;
+  height: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: rgb(204, 8, 8);
+  margin: auto 5px;
+}
+
+.button_delete:hover {
+  filter: brightness(0.9);
+}
+
 .input {
   padding: 1em;
   border: none;
@@ -145,8 +157,12 @@ input::placeholder {
 
 .input_row {
   display: flex;
-  gap: 10px;
-  margin: auto 10px;
+  background-color: var(--detalhe1);
+  margin: 20px auto;
+  padding: 10px;
+  justify-content: space-evenly;
+  gap: 5px;
+  border-radius: 10px;
 }
 
 .row_dados {
@@ -154,6 +170,8 @@ input::placeholder {
   flex-direction: column;
   gap: 10px;
 }
+
+
 
 .input_pedido {
   flex: 2;
@@ -171,3 +189,10 @@ input::placeholder {
   font-family: 'Montserrat', sans-serif;
 }
 
+.preview {
+  color: var(--escuro);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--detalhe1);
+  white-space: pre-line;
+}
