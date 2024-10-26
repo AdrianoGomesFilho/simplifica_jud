@@ -31,8 +31,20 @@ h2 {
 }
 
 h3 {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin: 30px;
+}
+
+.footer {
+  margin: 20px auto;
+  font-size: 0.6em;
+  display: flex;
+  align-items: center;
+}
+
+.github {
+  color: purple;
+  margin-left: 0.5em;
 }
 
 .container {

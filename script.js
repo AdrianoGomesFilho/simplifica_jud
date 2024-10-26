@@ -1,3 +1,5 @@
+let activeEmoji = ''
+
 const buttons = document.querySelectorAll('.button');
 
  // Add click event listener to each button
