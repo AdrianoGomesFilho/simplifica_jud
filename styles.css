@@ -1,18 +1,14 @@
 :root {
-  --green: #6bf376;
-  --dark-green: #015005;
-  --yellow: #ffff7a;
-  --dark-yellow: #939311;
-  --red: #ff4f4f;
-  --dark-red: #ad3131;
-  --blue: #76d5f1;
-  --dark-blue: #273bac;
+  --green: #00be10;
+  --yellow: #e4e400;
+  --red: #aa0000;
+  --blue: #2255ff;
   --text-color: #02040F;
   /* coolors */
   --background: #ffffff;
   --destaque: #ffb392;
   --detalhe1: #ffffff;
-  --detalhe2: #e2f1ff;
+  --detalhe2: #e6f3ff;
   --escuro: #02040F;
 }
 
@@ -48,27 +44,43 @@ h3 {
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-.container_botoes {
-  margin: 10px;
+.medium_container {
+  margin: 20px auto;
+  padding: 10px;
+  background-color: var(--detalhe1);
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 10px;
 }
 
-.linha_pedidos {
-  margin: 20px auto;
-  display: flex;
-  align-items: center;
+.container_botoes {
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ gap: 4px;
+ background-color: rgba(0, 0, 0, 0.055);
+ padding: 10px;
+ border-radius: 10px;
 }
 
 .button {
   margin: 0.5px;
-  height: 20px;
-  width: 20px;
+  height: 17px;
+  width: 17px;
   border: none;
   cursor: pointer;
+
 }
 
 .button:hover {
   transform: scale(1.1);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.button_emoji.active { 
+  transform: scale(1.2);
+  box-shadow: 1px 2px 9px 0px rgb(255, 255, 255);
+  filter: brightness(1.9); /* Darken the color by 20% */
 }
 
 .button_1{
@@ -89,6 +101,14 @@ h3 {
 .button_4 {
   background-color: var(--blue);
   border-radius: 30%;
+}
+
+.button_5 {
+  background-color: var(--detalhe2);
+  border-radius: 10%;
+  width: fit-content;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
 }
 
 .input {
@@ -113,8 +133,8 @@ input::placeholder {
 
 .input_row {
   display: flex;
-  flex: 1;
   gap: 10px;
+  margin: auto 10px;
 }
 
 .row_dados {
@@ -128,7 +148,7 @@ input::placeholder {
 }
 
 .input_fundamento {
-  flex: 3;
+  flex: 4;
 }
 
 .input_valor {

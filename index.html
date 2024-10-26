@@ -1,77 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simplifica Jud</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <!-- defer = ensures that script only runs after the full load -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simplifica Jud</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <!-- defer = ensures that script only runs after the full load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <h2>Simplifica Jud</h2>
+  <div class="container">
+    <h2>Simplifica Jud</h2>
     <h3>Dica: aperte TAB para preencher e criar novas linhas</h3>
-        <div class="row_dados">
-            <div class="row">
-                <div class="cell">
-                    <input type="text"
-                    class="input"
-                    placeholder="Parte autora">
-                </div>
-            </div>
-            <div class="row">
-                <div class="cell">
-                    <input type="text"
-                    class="input"
-                    placeholder="Parte ré">
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="cell">
-                    <input type="text"
-                    class="input"
-                    placeholder="Número do processo">
-                </div>
-            </div>
+    <div class="row_dados">
+      <div class="row">
+        <div class="cell">
+          <input type="text" class="input" placeholder="Parte autora">
         </div>
-
-        <div class="linha_pedidos">
-
-                <div class="container_botoes">
-                    <div class="button_box button_container1">
-                        <button class="button button_1"></button>
-                        <button class="button button_2"></button>
-                    </div>
-                    <div class="button_box button_container2">
-                        <button class="button button_3"></button>
-                        <button class="button button_4"></button>
-                    </div>
-                </div>
-
-            <div class="row input_row">
-                <input type="text" class="input  input_pedido" 
-                placeholder="Pedido">
-                <input type="text" class="input  input_fundamento" placeholder="Fundamento da decisão" >
-                <input type="text" 
-                class="input input_valor"
-                placeholder="Valor do pedido" >
-            </div>
-
+      </div>
+      <div class="row">
+        <div class="cell">
+          <input type="text" class="input" placeholder="Parte ré">
         </div>
-        <button onclick="addRow()" class="input botao_script">Adicionar linha</button>
-        <button onclick="copyResults()" class="input botao_script">Copiar resumo</button>
+      </div>
+
+      <div class="row">
+        <div class="cell">
+          <input type="text" class="input" placeholder="Número do processo">
+        </div>
+      </div>
     </div>
-    
+
+    <div class="medium_container">
+
+      
+        <div class="container_botoes">
+          <button class="button button_emoji button_1" onclick="pressEffect(this)"></button>
+          <button class="button button_emoji button_2" onclick="pressEffect(this)"></button>
+          <button class="button button_emoji button_3" onclick="pressEffect(this)"></button>
+          <button class="button button_emoji button_4" onclick="pressEffect(this)"></button>
+          <button class="button button_5" onclick="pressEffect(this)">Limpar</button>
+        </div>
+        <div class="row input_row">
+          <input type="text" class="input  input_pedido" placeholder="Pedido">
+          <input type="text" class="input  input_fundamento" placeholder="Fundamento da decisão">
+          <input type="text" class="input input_valor" placeholder="Valor do pedido">
+        </div>
+    </div>
+
+    <button onclick="addRow()" class="input botao_script">Adicionar linha</button>
+    <button onclick="copyResults()" class="input botao_script">Copiar resumo</button>
     <footer>
-        <p>
-            Veja mais projetos no
-            <a href="https://github.com/AdrianoGomesFilho?tab=repositories" target="_blank">Github Adriano Gomes</a>
-        </p>
+      <p>
+        Veja mais projetos no
+        <a href="https://github.com/AdrianoGomesFilho?tab=repositories" target="_blank">Github Adriano Gomes</a>
+      </p>
     </footer>
 </body>
+
 </html>
