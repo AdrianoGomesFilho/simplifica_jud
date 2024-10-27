@@ -142,7 +142,7 @@ function updateCustomerPreview() {
     customerPreviewText += `Sobre o pedido "${observacoes.join(', ')}" iremos fazer uma observação:<br>`;
   }
 
-  customerPreviewText += "<br>Cuidado com golpes! Havendo novidades lhe informaremos através dos meios oficiais de comunicação, reforçamos que o escritório não solicita adiantamentos de qualquer natureza. Havendo dúvida, comunique com nossa equipe.<br><br> É um prazer lhe ter como cliente! Aproveitamos para lhe pedir uma avaliação dos nossos serviços via Google Maps: https://maps.app.goo.gl/VzMMcRKxGyHCkxeq7.<br>";
+  customerPreviewText += "<br>Cuidado com golpes! Havendo novidades lhe informaremos através dos meios oficiais de comunicação, reforçamos que o escritório não solicita adiantamentos de qualquer natureza. Havendo dúvida, comunique com nossa equipe.<br><br>É um prazer lhe ter como cliente! Aproveitamos para lhe pedir uma avaliação dos nossos serviços via Google Maps: https://maps.app.goo.gl/VzMMcRKxGyHCkxeq7.<br>";
 
 
   // Display the customer preview in a separate element
