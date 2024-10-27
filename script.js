@@ -127,7 +127,7 @@ function updateCustomerPreview() {
   });
 
   // Build the customer preview text
-  let customerPreviewText = `Prezado(a) ${parteAutora}, tivemos decisão do ${orgaoJulgador} no processo número: ${numeroProcesso} contra a parte ré ${parteRe}.<br><br>`;
+  let customerPreviewText = `Prezado(a) ${parteAutora}, tivemos decisão do ${orgaoJulgador} no processo número: ${numeroProcesso} contra a parte ré "${parteRe}".<br><br>`;
 
   if (procedentes.length > 0) {
     customerPreviewText += `Os pedidos procedentes foram: "${procedentes.join(', ')}". A empresa poderá recorrer de tais pontos.<br>`;
