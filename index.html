@@ -7,11 +7,9 @@
   <title>Simplifica Jud</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  <!-- defer = ensures that script only runs after the full load -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,23 +19,23 @@
     <div class="row_dados">
       <div class="row dados_processo dados_autor">
         <div class="cell">
-          <input class="input input_dados" type="text" class="input" placeholder="Parte autora">
+          <input class="input input_dados" type="text" placeholder="Parte autora">
         </div>
       </div>
       <div class="row dados_processo dados_re">
         <div class="cell">
-          <input class="input input_dados" type="text" class="input" placeholder="Parte ré">
+          <input class="input input_dados" type="text" placeholder="Parte ré">
         </div>
       </div>
 
       <div class="row dados_processo dados_numero">
         <div class="cell">
-          <input class="input input_dados" type="text" class="input" placeholder="Número do processo">
+          <input class="input input_dados" type="text" placeholder="Número do processo">
         </div>
       </div>
       <div class="row dados_processo dados_orgao">
         <div class="cell">
-          <select class="input input_dados input" placeholder="Órgão julgador">
+          <select class="input input_dados" placeholder="Órgão julgador">
             <option value="" disabled selected>Selecione o órgão julgador</option>
             <option value="Juiz(a)">Juiz(a)</option>
             <option value="Tribunal">Tribunal</option>
@@ -48,37 +46,39 @@
 
     <div class="medium_container">
       <div class="row input_row">
-      <div class="container_botoes">
-        <button class="button button_emoji button_1" onclick="pressEffect(this);setActiveEmoji('🟢')" data-emoji="🟢"></button>
-        <button class="button button_emoji button_2" onclick="pressEffect(this);setActiveEmoji('🟡')" data-emoji="🟡"></button>
-        <button class="button button_emoji button_3" onclick="pressEffect(this);setActiveEmoji('🔴')" data-emoji="🔴"></button>
-        <button class="button button_emoji button_4" onclick="pressEffect(this); setActiveEmoji('🔵')" data-emoji="🔵"></button>
-        <button class="button button_5" onclick="pressEffect(this);clearInputs()">Restaurar</button>
-      </div>
+        <div class="container_botoes">
+          <button tabindex="-1" class="button button_emoji button_1" onclick="pressEffect(this);setActiveEmoji('🟢')" data-emoji="🟢"></button>
+          <button tabindex="-1" class="button button_emoji button_2" onclick="pressEffect(this);setActiveEmoji('🟡')" data-emoji="🟡"></button>
+          <button tabindex="-1" class="button button_emoji button_3" onclick="pressEffect(this);setActiveEmoji('🔴')" data-emoji="🔴"></button>
+          <button tabindex="-1" class="button button_emoji button_4" onclick="pressEffect(this); setActiveEmoji('🔵')" data-emoji="🔵"></button>
+          <button tabindex="-1" class="button button_5" onclick="pressEffect(this);clearInputs()">Limpar</button>
+        </div>
 
-      <input type="text" class="input  input_pedido" placeholder="Pedido">
-      <input type="text" class="input  input_fundamento" placeholder="Fundamento da decisão">
-      <input type="text" class="input input_valor" placeholder="Valor do pedido">
+        <input type="text" class="input input_pedido" placeholder="Pedido">
+        <input type="text" class="input input_fundamento" placeholder="Fundamento da decisão">
+        <input type="text" class="input input_valor" placeholder="Valor do pedido">
+      </div>
     </div>
-    </div>
+
     <button onclick="pressEffect(this); addRow()" class="input botao_script">Adicionar linha</button>
-    <button onclick="pressEffect(this); copyResults()" class="input botao_script">Copiar resumo</button>
+
+    <h3>Resumo Interno</h3>
+    <div id="internalPreview" class="preview"></div> <!-- Internal Preview Display -->
+    <button onclick="pressEffect(this); copyInternalPreview()" class="input" id="copyInternalPreview">Copiar Resumo Interno</button>
+
     <div>
-      <h3>Pré - visualização</h3>
-      <div id="preview" class="preview"></div>
+      <h3>Resumo ao cliente</h3>
+      <div id="customerPreview" class="preview"></div> <!-- Customer Preview Display -->
+      <button onclick="pressEffect(this); copyExternalPreview()" class="input" id="copyExternalPreview">Copiar Resumo Externo</button>
     </div>
   </div>
 
-  
   <footer>
     <p class="footer">
       Veja mais projetos no
-      <a class="github" href="https://github.com/AdrianoGomesFilho?tab=repositories" target="_blank">Github Adriano
-        Gomes</a>
+      <a class="github" href="https://github.com/AdrianoGomesFilho?tab=repositories" target="_blank">Github Adriano Gomes</a>
     </p>
   </footer>
-
-  </div>
 </body>
 
 </html>
