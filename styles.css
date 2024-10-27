@@ -206,6 +206,7 @@ input::placeholder {
   color: var(--escuro);
   border-radius: 10px;
   padding: 10px;
+  margin: 10px auto;
   background-color: var(--detalhe1);
   white-space: pre-line;
 }
