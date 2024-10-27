@@ -35,16 +35,22 @@ h3 {
   margin: 10px;
 }
 
+footer {
+  display: flex;             /* Use flexbox */
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically (if needed) */
+  padding: 1rem;            /* Add some padding if desired */
+  background-color: #f8f8f8; /* Optional: set background color */
+}
+
 .footer {
-  margin: 20px auto;
-  font-size: 0.6em;
-  display: flex;
-  align-items: center;
+  text-align: center;        /* Center text inside the paragraph */
+  margin: 0;                 /* Remove default margin */
 }
 
 .github {
-  color: purple;
-  margin-left: 0.5em;
+  text-decoration: none;      /* Optional: remove underline from links */
+  color: #007bff;            /* Optional: set link color */
 }
 
 .container {
@@ -76,8 +82,7 @@ h3 {
 }
 
 .button:hover {
-  transform: scale(1.1);
-  
+  transform: scale(1.5);
 }
 
 .button_emoji.active { 
@@ -140,7 +145,6 @@ h3 {
   border: none;
   background-color: var(--detalhe1);
   border-radius: 10px;
-  margin: 10px auto;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   font-family: 'Montserrat', sans-serif;
 }
@@ -181,9 +185,6 @@ input::placeholder {
   flex-direction: column;
   gap: 10px;
 }
-
-
-
 
 .input_pedido {
   flex: 2;
