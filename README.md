@@ -1,6 +1,6 @@
 # Simplifica Jud
 
-**Simplifica Jud** é um site que permite padronizar resumos de decisões judiciais tanto para o público interno do escritório de advocacia, quanto para o cliente, criando uma mensagem personalizada, e de quebra alertando sobre golpes e enviando um link de avaliação dos serviços.
+**Simplifica Jud** é um site que permite padronizar resumos de decisões judiciais tanto para o público interno do escritório de advocacia, quanto para o cliente, criando uma mensagem personalizada, e de quebra alertando sobre golpes e enviando um link de avaliação dos serviços. O preenchimento é manual, assim como a análise do processo.
 
 ## Ferramentas
 - **Input Fields:** Campos padronizados: facilita que uma equipe de várias pessoas utilize de um resumo padrão, com formato pré definido. 
