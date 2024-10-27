@@ -40,7 +40,6 @@ footer {
   justify-content: center;   /* Center horizontally */
   align-items: center;       /* Center vertically (if needed) */
   padding: 1rem;            /* Add some padding if desired */
-  background-color: #f8f8f8; /* Optional: set background color */
 }
 
 .footer {
