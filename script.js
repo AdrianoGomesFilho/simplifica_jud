@@ -161,7 +161,7 @@ inputFields.forEach(input => {
 
 // Modify copyResults to just copy the current preview text
 function copyInternalPreview() {
-  const internalPreview = document.getElementById("internalPreview").innerHTML; // Use innerHTML for formatting
+  const internalPreview = document.getElementById("internalPreview").innerText; // Use innerHTML for formatting
 
   navigator.clipboard.writeText(internalPreview.replace(/<br\s*\/?>/g, "\n")) // Replace <br> with newline
     .catch(err => {
@@ -170,7 +170,7 @@ function copyInternalPreview() {
 }
 
 function copyExternalPreview() {
-  const externalPreview = document.getElementById("customerPreview").innerHTML; // Use innerHTML for formatting
+  const externalPreview = document.getElementById("customerPreview").innerText; // Use innerHTML for formatting
 
   navigator.clipboard.writeText(externalPreview.replace(/<br\s*\/?>/g, "\n")) // Replace <br> with newline
     .catch(err => {
