@@ -130,19 +130,19 @@ function updateCustomerPreview() {
   let customerPreviewText = `Prezado(a) ${parteAutora}, tivemos decisão do ${orgaoJulgador} no processo número: ${numeroProcesso} contra a parte ré "${parteRe}".<br><br>`;
 
   if (procedentes.length > 0) {
-    customerPreviewText += `Os pedidos procedentes foram: "${procedentes.join(', ')}". A empresa poderá recorrer de tais pontos.<br>`;
+    customerPreviewText += `Os pedidos procedentes foram: "${procedentes.join(', ')}". A empresa poderá recorrer de tais pontos.<br><br>`;
   }
   if (improcedentes.length > 0) {
-    customerPreviewText += `Os pedidos improcedentes foram: "${improcedentes.join(', ')}". Iremos recorrer de tais pontos.<br>`;
+    customerPreviewText += `Os pedidos improcedentes foram: "${improcedentes.join(', ')}". Iremos recorrer de tais pontos.<br><br>`;
   }
   if (parcialmenteProcedentes.length > 0) {
-    customerPreviewText += `Os pedidos parcialmente procedentes foram: "${parcialmenteProcedentes.join(', ')}".<br>`;
+    customerPreviewText += `Os pedidos parcialmente procedentes foram: "${parcialmenteProcedentes.join(', ')}".<br><br>`;
   }
   if (observacoes.length > 0) {
     customerPreviewText += `Sobre o pedido "${observacoes.join(', ')}" iremos fazer uma observação:<br>`;
   }
 
-  customerPreviewText += "<br>Cuidado com golpes! Havendo novidades lhe informaremos através dos meios oficiais de comunicação, reforçamos que o escritório não solicita adiantamentos de qualquer natureza. Havendo dúvida, comunique com nossa equipe.<br><br>É um prazer lhe ter como cliente! Aproveitamos para lhe pedir uma avaliação dos nossos serviços via Google Maps: LINK DO SEU ESCRITÓRIO.<br>";
+  customerPreviewText += "<br>Cuidado com golpes! Havendo novidades lhe informaremos através dos meios oficiais de comunicação, reforçamos que o escritório não solicita adiantamentos de qualquer natureza. Havendo dúvida, comunique com nossa equipe.<br><br>É um prazer lhe ter como cliente! Aproveitamos para lhe pedir uma avaliação dos nossos serviços via Google Maps: https://maps.app.goo.gl/RpNeBQreMS7fSuUUA.<br>";
 
 
   // Display the customer preview in a separate element
