@@ -1,20 +1,16 @@
 let activeEmoji = "";
 
-// Function to set the active emoji
 function setActiveEmoji(emoji) {
   activeEmoji = emoji;
 }
 
 function clearInputs() {
-  // Reset the active emoji
   activeEmoji = "";
-
-  // Clear input fields in the current row
   const currentRow = event.target.closest(".input_row");
   if (currentRow) {
     const inputs = currentRow.querySelectorAll(".input");
     inputs.forEach(input => {
-      input.value = ""; // Clear each input field
+      input.value = "";
     });
 
     // Reset the active state of emoji buttons
@@ -39,16 +35,11 @@ function pressEffect(btn) {
 
 // Update preview dynamically
 function updatePreview() {
-  const parteAutoraInput = document.querySelector(".dados_autor .input_dados");
-  const parteReInput = document.querySelector(".dados_re .input_dados");
-  const numeroProcessoInput = document.querySelector(".dados_numero .input_dados");
-  const orgaoJulgadorInput = document.querySelector(".dados_orgao .input_dados");
+  const parteAutora = document.querySelector(".dados_autor .input_dados").value.trim() || "";
+  const parteRe = document.querySelector(".dados_re .input_dados").value.trim();
+  const numeroProcesso = document.querySelector(".dados_numero .input_dados").value.trim();
+  const orgaoJulgador = document.querySelector(".dados_orgao .input_dados").value;
 
-  // Get current values from the inputs
-  const parteAutora = parteAutoraInput.value.trim();
-  const parteRe = parteReInput.value.trim();
-  const numeroProcesso = numeroProcessoInput.value.trim();
-  const orgaoJulgador = orgaoJulgadorInput.value;
 
   let dados_processo_resultados = "";
 
