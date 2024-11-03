@@ -121,13 +121,13 @@ function updateCustomerPreview() {
   let customerPreviewText = `Prezado(a) ${parteAutora}, tivemos decisão do ${orgaoJulgador} no processo número: ${numeroProcesso} contra a parte ré "${parteRe}".<br><br>`;
 
   if (procedentes.length > 0) {
-    customerPreviewText += `Os pedidos procedentes foram: "${procedentes.join(', ')}". A empresa poderá recorrer de tais pontos.<br><br>`;
+    customerPreviewText += `Os pedidos procedentes foram: "${procedentes.join(', ')}". A parte ré poderá recorrer de tais pontos.<br><br>`;
   }
   if (improcedentes.length > 0) {
-    customerPreviewText += `Os pedidos improcedentes foram: "${improcedentes.join(', ')}". Iremos recorrer de tais pontos.<br><br>`;
+    customerPreviewText += `Os pedidos improcedentes foram: "${improcedentes.join(', ')}". Poderemos recorrer de tais pontos.<br><br>`;
   }
   if (parcialmenteProcedentes.length > 0) {
-    customerPreviewText += `Os pedidos parcialmente procedentes foram: "${parcialmenteProcedentes.join(', ')}".<br><br>`;
+    customerPreviewText += `Os pedidos parcialmente procedentes foram: "${parcialmenteProcedentes.join(', ')}". Poderá haver recurso de ambas as partes.<br><br>`;
   }
   if (observacoes.length > 0) {
     customerPreviewText += `Sobre o pedido "${observacoes.join(', ')}" iremos fazer uma observação:<br>`;
@@ -172,6 +172,7 @@ function copyExternalPreview() {
 // Add event listeners to the copy buttons
 document.getElementById("copyInternalPreview").addEventListener('click', copyInternalPreview);
 document.getElementById("copyExternalPreview").addEventListener('click', copyExternalPreview);
+
 
 // Function to add a new row
 function addRow() {

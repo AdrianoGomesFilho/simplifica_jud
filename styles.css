@@ -155,6 +155,10 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 
+.dados_orgao_option {
+  border-color: #02040F;
+}
+
 @media (max-width: 850px) {
   .input_row .input:last-child {
     margin-top: 10px; /* Add space above the last input */
