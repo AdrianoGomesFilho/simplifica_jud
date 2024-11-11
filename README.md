@@ -17,11 +17,3 @@
 ## Como usar
 
 Acessando via hospedagem no Vercel https://simplifica-jud.vercel.app/
-Prezado(a) , tivemos decisão do  no processo número:  contra a parte ré .
-
-Os pedidos procedentes foram: "123". A empresa poderá recorrer de tais pontos.
-Os pedidos improcedentes foram: "123". Iremos recorrer de tais pontos.
-
-Cuidado com golpes! Havendo novidades lhe informaremos através dos meios oficiais de comunicação, reforçamos que o escritório não solicita adiantamentos de qualquer natureza. Havendo dúvida, comunique com nossa equipe.
-
- É um prazer lhe ter como cliente! Aproveitamos para lhe pedir uma avaliação dos nossos serviços via Google Maps: https://maps.app.goo.gl/VzMMcRKxGyHCkxeq7.
