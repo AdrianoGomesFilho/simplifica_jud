@@ -1,5 +1,4 @@
 # Simplifica Jud
-
 **Simplifica Jud** é um site que permite padronizar resumos de decisões judiciais tanto para o público interno do escritório de advocacia, quanto para o cliente, criando uma mensagem personalizada, e de quebra alertando sobre golpes e enviando um link de avaliação dos serviços. O preenchimento é manual, assim como a análise do processo.
 
 ## Ferramentas
@@ -9,11 +8,11 @@
 - **Design adaptado:** Adaptado para celulares, mas o uso principal é por desktop.
 
 ## Tecnologias
-
 - HTML
 - CSS
 - JavaScript
 
 ## Como usar
-
 Acessando via hospedagem no Vercel https://simplifica-jud.vercel.app/
+
+Vídeo apresentação do projeto no Instagram @adrianogomes.adv
